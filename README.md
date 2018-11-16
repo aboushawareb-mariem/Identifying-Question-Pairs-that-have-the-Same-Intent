@@ -43,6 +43,8 @@ First thing, I would like to give credit to Elior Cohen from (https://medium.com
 
 ![git](https://user-images.githubusercontent.com/16010276/48633845-1ded1400-e9bc-11e8-989a-fa7af7011b9a.png)
 
+* Having a siamese architecture means that we have two or more identical branches of the network, one for each input passed to the model.
+
 * In this model, Glove's pretrained word embeddings were used. Word embedding is a way of mapping words to the vector space. Thus, every word is represented using a vector, and semantically similar words have close vectors. This allows for a better and a more meaningful numerical repersentation of words.
 
 * In this model also, Keras's Embedding layer was used in order to replace every word with its corresponding vector from the Glove model. In order to do this, the following steps were followed:
@@ -51,4 +53,9 @@ First thing, I would like to give credit to Elior Cohen from (https://medium.com
  
   &nbsp;&nbsp;&nbsp;2. A loop over the dictionary was done to extract and store relevant words and their corresponding         vectors from the Glove model, since it is very large and not all words are needed.
  
-  &nbsp;&nbsp;&nbsp;3. A mapping between the indices of the words in the dictionary and the vectors of these words was done   using a list in which every word vector is stored in the index corresponding to the index of the word it represents in the    dictionary. 
+  &nbsp;&nbsp;&nbsp;3. A mapping between the indices of the words in the dictionary and the vectors of these words was done   using a list in which every word vector is stored in the index corresponding to the index of the word it represents in the    dictionary.
+  &nbsp;&nbsp;&nbsp;4. This index-vector mapping is passed to the embedding layer as the "weights" parameter.
+  &nbsp;&nbsp;&nbsp;5. Each question has to be first converted to a list of indices to be passed to the embedding layer. For this, Keras's predefined Tokenizer method text_to_sequences is used.
+  &nbsp;&nbsp;&nbsp;6. List of indices (questions as lists of indices instead of lists of words), and index-vector mapping are passed to the embedding layer, and it takes care of replacing each index with its corresponding vector.
+* The embedding layer passes the inputs to the model which consists of an Long Short-Term Memory neural network, which is a type of Recurrent neural networks that can remember farther in the past thanks to its gates. Long Short-Term Memory NNs have the benefit of taking context into consideration while computing the prediction.
+* Then the outputs from each branch of the Siamese architecture are combined using Manhattan distance.
