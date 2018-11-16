@@ -26,4 +26,17 @@ First thing, I would like to give credit to Elior Cohen from (https://medium.com
 
 ## **Feature Based Model**
 
+![featurebasedgithub](https://user-images.githubusercontent.com/16010276/48632881-f8f7a180-e9b9-11e8-8f17-91ec6f623efc.png)
+* In this model, NLTK's tokenizer was used to tokenize each question into a list of words, and for the preprocessing as well.
 
+* Three features were extracted from each questin pair:
+
+  &nbsp;&nbsp;&nbsp;1. The ratio of the questions' lengths.
+
+  &nbsp;&nbsp;&nbsp;2. Whether or not the first word in both questions match.
+
+  &nbsp;&nbsp;&nbsp;3. Whether or not the last word in both questions match.
+
+* These three features are then passed to the model. The model is a simple fully connected neural network with 3 input neurons, and 2 hidden layers.
+
+## **Siamese Architecture Model**
