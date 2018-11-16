@@ -11,6 +11,7 @@ First thing, I would like to give credit to Elior Cohen from (https://medium.com
    &nbsp;&nbsp;&nbsp;**3. Siamese architecture model:** A more complex model that uses Glove pretrained word embeddings, &nbsp;&nbsp;&nbsp;and follows the Siamese architecture described by Stanford's paper.
 
 ## **Baseline Model**
+![Baseline Model](/home/mariem/Pictures/githubbaseline.png)
 * In this model, regular expressions were used for preprocessing of the text to remove any insignificant characters, normalize capitalization, etc.
 * TF-IDF stands for Term Frequency Inverse Document frequency. TF-IDF assigns a score to each word based on its frequency in one document in a corpus (hence "document frequency"), as well as its frequency across all documents in the corpus (hence inverse document frequency). In general, TF-IDF is used to rank the imporatnce of a word in a document. Based on TF-IDF we can do ranked retrieval of documents with respect to a certain query. This is done by getting the sum of the TF-IDF score of each word in each document, then ordering the documents according to the summation of the TF-IDF scores of the query words in each document. The higher the TF-IDF total score, the more relevant the document is.
 
