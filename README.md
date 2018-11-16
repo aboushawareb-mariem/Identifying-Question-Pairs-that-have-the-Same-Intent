@@ -43,7 +43,7 @@ First thing, I would like to give credit to Elior Cohen from (https://medium.com
 
 ![git](https://user-images.githubusercontent.com/16010276/48633845-1ded1400-e9bc-11e8-989a-fa7af7011b9a.png)
 
-* Having a siamese architecture means that we have two or more identical branches of the network, one for each input passed to the model.
+* Having a siamese architecture means that we have two or more identical branches of the network, one for each input passed to the model. This architecture was built using Keras's Functional API.
 
 * In this model, Glove's pretrained word embeddings were used. Word embedding is a way of mapping words to the vector space. Thus, every word is represented using a vector, and semantically similar words have close vectors. This allows for a better and a more meaningful numerical repersentation of words.
 
