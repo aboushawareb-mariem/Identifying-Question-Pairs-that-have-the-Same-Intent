@@ -1,5 +1,9 @@
 # Identifying-Question-Pairs-that-have-the-Same-Intent
+
 This is a project based on the Quora-Kaggle challenge for identifying question pairs that could be answered using the same answer
+
+## Acknowledgments
+
 First thing, I would like to give credit to Elior Cohen from (https://medium.com/mlreview/implementing-malstm-on-kaggles-quora-question-pairs-competition-8b31b0b16a07) for his tutorial on how to implement the architecture described in Stanford University's paper: http://web.stanford.edu/class/cs224n/reports/2759336.pdf. I would also like to thank Quora for releasing its first question-pair dataset which was used to train and test the models in this repo.
 
 ## **Three Implemented Models**
