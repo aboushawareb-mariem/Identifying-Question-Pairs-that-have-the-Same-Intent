@@ -40,3 +40,15 @@ First thing, I would like to give credit to Elior Cohen from (https://medium.com
 * These three features are then passed to the model. The model is a simple fully connected neural network with 3 input neurons, and 2 hidden layers.
 
 ## **Siamese Architecture Model**
+
+![git](https://user-images.githubusercontent.com/16010276/48633845-1ded1400-e9bc-11e8-989a-fa7af7011b9a.png)
+
+* In this model, Glove's pretrained word embeddings were used. Word embedding is a way of mapping words to the vector space. Thus, every word is represented using a vector, and semantically similar words have close vectors. This allows for a better and a more meaningful numerical repersentation of words.
+
+* In this model also, Keras's Embedding layer was used in order to replace every word with its corresponding vector from the Glove model. In order to do this, the following steps were followed:
+ 
+  &nbsp;&nbsp;&nbsp;1. A dictionary of the words of the dataset was created. That is the list of unique words in the dataset.
+ 
+  &nbsp;&nbsp;&nbsp;2. A loop over the dictionary was done to extract and store relevant words and their corresponding         vectors from the Glove model, since it is very large and not all words are needed.
+ 
+  &nbsp;&nbsp;&nbsp;3. A mapping between the indices of the words in the dictionary and the vectors of these words was done   using a list in which every word vector is stored in the index corresponding to the index of the word it represents in the    dictionary. 
